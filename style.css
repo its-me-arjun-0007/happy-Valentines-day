@@ -1,0 +1,612 @@
+/* Color Palette: Soft Pinks, Blush, Cream */
+:root {
+    --bg-color: #fff0f3;
+    --primary-pink: #ff4d6d;
+    --soft-pink: #ffb3c1;
+    --text-color: #590d22;
+    --card-bg: #fff;
+    --font-hand: 'Pacifico', cursive;
+    --font-main: 'Nunito', sans-serif;
+    --font-tech: 'Courier New', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Floating Hearts Background */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -10vh;
+    background-color: rgba(255, 77, 109, 0.2);
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 0 4px;
+    transform: rotate(-45deg);
+    animation: float 6s linear infinite;
+}
+
+.heart:before, .heart:after {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.heart:before { top: -15px; left: 0; }
+.heart:after { left: 15px; top: 0; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(-45deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(-45deg); opacity: 0; }
+}
+
+/* Music Button */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+#musicBtn {
+    background: var(--primary-pink);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: var(--font-main);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+}
+
+/* Intro Section */
+.intro-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.typing-text {
+    font-family: var(--font-hand);
+    font-size: 2.5rem;
+    color: var(--primary-pink);
+    min-height: 60px;
+    padding: 0 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.scroll-indicator {
+    margin-top: 50px;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-family: var(--font-hand);
+    font-size: 2rem;
+    color: var(--primary-pink);
+    margin: 50px 0 30px 0;
+}
+
+/* --- Stats Section (Hacker Theme) --- */
+.stats-section {
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.15);
+    text-align: center;
+    border: 1px solid rgba(255, 77, 109, 0.1);
+}
+
+.stats-title {
+    font-family: var(--font-tech);
+    font-weight: bold;
+    color: var(--primary-pink);
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    border-bottom: 2px dashed var(--soft-pink);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    background: var(--bg-color);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.stat-box:hover {
+    transform: scale(1.05);
+    background: #ffe5ec;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.7rem;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.stat-sub {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--primary-pink);
+    margin-top: 5px;
+    font-family: var(--font-tech);
+}
+
+/* Timeline */
+.timeline-section { padding: 20px; }
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    border-left: 2px solid var(--soft-pink);
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '❤';
+    position: absolute;
+    left: -29px;
+    top: 0;
+    background: var(--bg-color);
+    color: var(--primary-pink);
+    font-size: 1.2rem;
+}
+
+.date-bubble {
+    background: var(--soft-pink);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.content {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Chat Section */
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-bubble {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+    width: fit-content;
+    max-width: 80%;
+}
+
+.chat-bubble.anna {
+    border-left: 4px solid var(--primary-pink);
+    margin-right: auto;
+}
+
+.chat-bubble.odiyan {
+    border-right: 4px solid #590d22;
+    margin-left: auto;
+    text-align: right;
+    background-color: #fffcfd;
+}
+
+/* Gallery - Updated for 4 Photos (2x2 Grid) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Force 2 columns */
+    gap: 15px;
+    padding: 20px;
+    max-width: 500px; /* Kept narrow for better mobile look */
+    margin: 0 auto;
+}
+
+.photo-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: white;
+    padding: 5px; /* Adds a cute white border frame */
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures photos don't stretch weirdly */
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo-card img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Rules Section Styles --- */
+.rules-section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    background: white;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(255, 77, 109, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.rules-list li:hover {
+    transform: translateX(5px);
+    border-left: 3px solid var(--primary-pink);
+}
+
+.rules-list li .icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.rules-list li p {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.rules-list li.dealbreaker {
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    background: #fff5f5;
+}
+
+.rules-list li.dealbreaker .icon {
+    filter: grayscale(1);
+}
+
+/* --- NEW Hacker Love Letter Styles --- */
+
+/* The Container (The Terminal Window) */
+.envelope {
+    background: rgba(255, 255, 255, 0.95); /* Glassy White */
+    padding: 0; /* Important: Removes the old padding */
+    border-radius: 12px;
+    max-width: 550px;
+    margin: 0 auto;
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
+    border: 1px solid var(--soft-pink);
+    overflow: hidden; 
+    font-family: 'Courier New', monospace; /* HACKER FONT */
+}
+
+/* The Terminal Header (Top Bar) */
+.terminal-header {
+    background: #ffe5ec; /* Light Pink Bar */
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--soft-pink);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+/* The Content */
+.love-letter {
+    padding: 25px;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.love-letter p {
+    margin-bottom: 15px;
+}
+
+.code-line {
+    color: #888;
+    font-size: 0.85rem;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cmd {
+    color: var(--primary-pink);
+    font-weight: bold;
+}
+
+.highlight {
+    background-color: #ffe5ec;
+    color: var(--text-color);
+    padding: 0 4px;
+    border-radius: 4px;
+    border: 1px dashed var(--primary-pink);
+    font-weight: bold;
+}
+
+/* The Blinking Cursor Effect */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background-color: var(--primary-pink);
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Signature Adjustments */
+.signature {
+    margin-top: 30px;
+    text-align: right; 
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+}
+
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--primary-pink);
+    font-size: 0.8rem;
+    margin-bottom: 60px; /* Space for music button */
+}
+
+/* --- Love Logs (Carousel Section) --- */
+.poetry-section {
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.poetry-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.poem-card {
+    background: #1e1e1e; /* Matches your dark theme */
+    color: #e0e0e0;
+    width: 100%;
+    
+    /* FIX 1: Fixed Height stops the jumping */
+    height: 420px; 
+    
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 77, 109, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Keeps borders clean */
+    position: relative;
+}
+
+.small-header {
+    background: #fff0f3;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255, 77, 109, 0.1);
+}
+
+.poem-content {
+    padding: 30px 60px; /* 60px padding protects text from buttons */
+    font-family: var(--font-main);
+    font-size: 1rem;
+    line-height: 1.7;
+    flex-grow: 1;
+    
+    /* FIX 2: Scroll inside if text is long */
+    overflow-y: auto;
+    
+    /* Hide Scrollbar for cleaner look */
+    scrollbar-width: thin; 
+    scrollbar-color: var(--primary-pink) transparent;
+}
+.poem-content ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.poem-content li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.poem-footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--primary-pink);
+    font-family: var(--font-tech);
+    background: #fffbfc;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* --- Navigation Buttons (The Arrows) --- */
+.nav-btn {
+    background: white;
+    border: 1px solid var(--primary-pink);
+    color: var(--primary-pink);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    
+    /* Flexbox centers the SVG perfectly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove all padding to let Flexbox do the work */
+}
+
+/* Size the icon inside the button */
+.nav-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    /* CRITICAL FIX: This makes the icon 'invisible' to clicks, 
+       so the click passes through to the button. */
+    pointer-events: none; 
+}
+
+.nav-btn:hover {
+    background: var(--primary-pink);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 600px) {
+    .poetry-container {
+        position: relative;
+    }
+
+    .nav-btn {
+        position: absolute;
+        /* Perfect Vertical Centering */
+        top: 50%;
+        transform: translateY(-50%); 
+        
+        /* Force buttons to be on TOP of everything */
+        z-index: 100; 
+        
+        /* Visual adjustments */
+        opacity: 0.9;
+        width: 35px;
+        height: 35px;
+        background: var(--primary-pink);
+        color: white;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .prev-btn { left: 0px; }
+    .next-btn { right: 0px; }
+
+    /* CRITICAL FIX: Force text away from the buttons */
+    .poem-content {
+        padding-left: 60px !important;  /* Bigger safe zone */
+        padding-right: 60px !important; /* Bigger safe zone */
+    }
+}
