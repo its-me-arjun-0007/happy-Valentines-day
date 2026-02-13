@@ -662,3 +662,21 @@ footer {
 }
 .visible { opacity: 1; }
 
+.proposal-box {
+    position: relative; /* Container needs relative */
+    height: 200px;      /* Give it space to move */
+}
+
+.no-btn {
+    position: absolute; /* Button needs absolute to move */
+    transition: top 0.3s, left 0.3s; /* Smooth movement */
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.yes-btn {
+    z-index: 100; /* Ensure YES is always clickable */
+}
+
