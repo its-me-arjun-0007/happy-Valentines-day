@@ -195,16 +195,25 @@ window.onload = () => {
 };
 
 function updateUptime() {
-    const start = new Date("August 16, 2022 19:09:00").getTime();
-    const now = new Date().getTime();
+    const start = new Date("2022-08-16T19:09:00"); // ISO format is safer
+    const now = new Date();
     const diff = now - start;
-    
+
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    
-    document.getElementById("uptime").innerText = `${days}d ${hours}h`;
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    const element = document.getElementById("uptime");
+    if (element) {
+        element.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
 }
+
+// Run immediately, then every second
 setInterval(updateUptime, 1000);
+updateUptime();
+
 
 function moveButton(btn) {
     // Get screen width/height to keep button on screen
