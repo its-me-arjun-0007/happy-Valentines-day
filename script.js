@@ -193,3 +193,46 @@ window.onload = () => {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach(el => observer.observe(el));
 };
+
+function updateUptime() {
+    const start = new Date("August 16, 2022 19:09:00").getTime();
+    const now = new Date().getTime();
+    const diff = now - start;
+    
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    
+    document.getElementById("uptime").innerText = `${days}d ${hours}h`;
+}
+setInterval(updateUptime, 1000);
+
+function moveButton(btn) {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 100);
+    btn.style.position = 'fixed';
+    btn.style.left = x + 'px';
+    btn.style.top = y + 'px';
+}
+
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #0f0; /* Hacker Green */
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+}
+.terminal-text p {
+    animation: type 2s steps(40, end);
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 5px;
+}
+
