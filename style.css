@@ -749,6 +749,7 @@ footer {
     font-weight: bold;
 }
 
+/* FIXED NO BUTTON STYLES */
 .no-btn {
     background-color: #e74c3c; /* Red */
     color: white;
@@ -758,5 +759,21 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    }
+    
+    /* IMPORTANT: This resets the button so it sits next to YES */
+    position: relative !important; 
+    top: auto !important;
+    left: auto !important;
+}
 
+.yes-btn {
+    background-color: #2ecc71; /* Green */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
