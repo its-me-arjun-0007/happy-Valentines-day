@@ -174,16 +174,56 @@ function updateUptime() {
     }
 }
 
-// --- 6. RUNAWAY NO BUTTON (MOBILE FIXED) ---
-function moveButton(btn) {
-    const maxWidth = window.innerWidth - 100;
-    const maxHeight = window.innerHeight - 100;
-    const newX = Math.random() * maxWidth;
-    const newY = Math.random() * maxHeight;
+/* --- GROWING YES BUTTON LOGIC --- */
+let noClickCount = 0;
 
-    btn.style.position = 'fixed';
-    btn.style.left = Math.max(10, newX) + 'px'; // Prevent going off screen
-    btn.style.top = Math.max(10, newY) + 'px';
+function rejectProposal() {
+    noClickCount++;
+    
+    // 1. Make Yes Button Bigger
+    const yesBtn = document.getElementById('yesBtn');
+    let currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+    let newSize = currentSize * 1.5; // Grow by 50% each time
+    yesBtn.style.fontSize = newSize + 'px';
+    
+    // 2. Change No Button Text (Pleading)
+    const noBtn = document.getElementById('noBtn');
+    const phrases = [
+        "No",
+        "Are you sure?",
+        "Really sure?",
+        "Think again!",
+        "Last chance!",
+        "Surely not?",
+        "You might regret this!",
+        "Give it another thought!",
+        "Are you absolutely certain?",
+        "This could be a mistake!",
+        "Have a heart!",
+        "Don't be so cold!",
+        "Change of heart?",
+        "Wouldn't you reconsider?",
+        "Is that your final answer?",
+        "You're breaking my heart ;(",
+        "Plsss? :( You're breaking my heart"
+    ];
+    
+    // Loop through phrases, stop at the last one
+    if (noClickCount < phrases.length) {
+        noBtn.innerText = phrases[noClickCount];
+    } else {
+        noBtn.innerText = phrases[phrases.length - 1];
+    }
+}
+
+function acceptProposal() {
+    // Hide buttons and show success message
+    document.getElementById('proposalQuestion').innerText = "Ok Yayyyyy!!! ❤️";
+    document.querySelector('.buttons').style.display = 'none';
+    
+    // Optional: Trigger confetti or hearts again
+    createHearts(); 
+    alert("I knew it! ❤️ Happy Valentine's Day!");
 }
 
 // --- 7. MUSIC & HEARTS ---
