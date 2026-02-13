@@ -207,12 +207,18 @@ function updateUptime() {
 setInterval(updateUptime, 1000);
 
 function moveButton(btn) {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 100);
-    btn.style.position = 'fixed';
-    btn.style.left = x + 'px';
-    btn.style.top = y + 'px';
+    // Get screen width/height to keep button on screen
+    const maxWidth = window.innerWidth - 100; // buffer
+    const maxHeight = window.innerHeight - 100; 
+
+    const newX = Math.random() * maxWidth;
+    const newY = Math.random() * maxHeight;
+
+    btn.style.position = 'fixed'; // Switch to fixed so it can go anywhere
+    btn.style.left = newX + 'px';
+    btn.style.top = newY + 'px';
 }
+
 
 // NEW STORY ANIMATION SEQUENCE
 function runBootSequence() {
