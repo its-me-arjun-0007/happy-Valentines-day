@@ -174,7 +174,7 @@ function updateUptime() {
     }
 }
 
-/* --- GROWING YES BUTTON LOGIC --- */
+// --- 6. GROWING YES BUTTON LOGIC ---
 let noClickCount = 0;
 
 function rejectProposal() {
@@ -208,7 +208,6 @@ function rejectProposal() {
         "Plsss? :( You're breaking my heart"
     ];
     
-    // Loop through phrases, stop at the last one
     if (noClickCount < phrases.length) {
         noBtn.innerText = phrases[noClickCount];
     } else {
@@ -217,13 +216,18 @@ function rejectProposal() {
 }
 
 function acceptProposal() {
-    // Hide buttons and show success message
     document.getElementById('proposalQuestion').innerText = "Ok Yayyyyy!!! ❤️";
     document.querySelector('.buttons').style.display = 'none';
     
-    // Optional: Trigger confetti or hearts again
+    // Add the Bear GIF
+    const bearContainer = document.querySelector('.proposal-box');
+    const bearImg = document.createElement('img');
+    bearImg.src = "https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif"; 
+    bearImg.style.width = "150px";
+    bearImg.style.marginTop = "20px";
+    bearContainer.appendChild(bearImg);
+    
     createHearts(); 
-    alert("I knew it! ❤️ Happy Valentine's Day!");
 }
 
 // --- 7. MUSIC & HEARTS ---
@@ -264,11 +268,9 @@ window.addEventListener('load', () => {
     renderPoem();
     createHearts();
     
-    // Start Uptime Clock
     setInterval(updateUptime, 1000);
     updateUptime();
 
-    // Fade In Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) entry.target.classList.add('visible');

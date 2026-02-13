@@ -265,13 +265,13 @@ body {
     background-color: #fffcfd;
 }
 
-/* Gallery - Updated for 4 Photos (2x2 Grid) */
+/* Gallery */
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Force 2 columns */
     gap: 15px;
     padding: 20px;
-    max-width: 500px; /* Kept narrow for better mobile look */
+    max-width: 500px; 
     margin: 0 auto;
 }
 
@@ -280,13 +280,13 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background: white;
-    padding: 5px; /* Adds a cute white border frame */
+    padding: 5px;
 }
 
 .photo-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures photos don't stretch weirdly */
+    object-fit: cover; 
     border-radius: 8px;
     display: block;
     transition: transform 0.3s ease;
@@ -347,24 +347,21 @@ body {
     filter: grayscale(1);
 }
 
-/* --- NEW Hacker Love Letter Styles --- */
-
-/* The Container (The Terminal Window) */
+/* --- Hacker Love Letter Styles --- */
 .envelope {
-    background: rgba(255, 255, 255, 0.95); /* Glassy White */
-    padding: 0; /* Important: Removes the old padding */
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 0; 
     border-radius: 12px;
     max-width: 550px;
     margin: 0 auto;
     box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
     border: 1px solid var(--soft-pink);
     overflow: hidden; 
-    font-family: 'Courier New', monospace; /* HACKER FONT */
+    font-family: 'Courier New', monospace; 
 }
 
-/* The Terminal Header (Top Bar) */
 .terminal-header {
-    background: #ffe5ec; /* Light Pink Bar */
+    background: #ffe5ec; 
     padding: 10px 15px;
     display: flex;
     align-items: center;
@@ -389,7 +386,6 @@ body {
     font-weight: bold;
 }
 
-/* The Content */
 .love-letter {
     padding: 25px;
     text-align: left;
@@ -424,7 +420,6 @@ body {
     font-weight: bold;
 }
 
-/* The Blinking Cursor Effect */
 .cursor {
     display: inline-block;
     width: 10px;
@@ -439,14 +434,12 @@ body {
     50% { opacity: 0; }
 }
 
-/* Signature Adjustments */
 .signature {
     margin-top: 30px;
     text-align: right; 
     font-family: 'Courier New', monospace;
     font-size: 1.1rem;
 }
-
 
 /* Animations */
 .fade-in {
@@ -484,20 +477,17 @@ footer {
 }
 
 .poem-card {
-    background: #1e1e1e; /* Matches your dark theme */
+    background: #1e1e1e;
     color: #e0e0e0;
     width: 100%;
-    
-    /* FIX 1: Fixed Height stops the jumping */
     height: 420px; 
-    
     padding: 0;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 77, 109, 0.2);
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Keeps borders clean */
+    overflow: hidden;
     position: relative;
 }
 
@@ -508,16 +498,12 @@ footer {
 }
 
 .poem-content {
-    padding: 30px 60px; /* 60px padding protects text from buttons */
+    padding: 30px 60px;
     font-family: var(--font-main);
     font-size: 1rem;
     line-height: 1.7;
     flex-grow: 1;
-    
-    /* FIX 2: Scroll inside if text is long */
     overflow-y: auto;
-    
-    /* Hide Scrollbar for cleaner look */
     scrollbar-width: thin; 
     scrollbar-color: var(--primary-pink) transparent;
 }
@@ -541,7 +527,7 @@ footer {
     border-top: 1px solid #f0f0f0;
 }
 
-/* --- Navigation Buttons (The Arrows) --- */
+/* --- Navigation Buttons --- */
 .nav-btn {
     background: white;
     border: 1px solid var(--primary-pink);
@@ -552,21 +538,16 @@ footer {
     cursor: pointer;
     transition: all 0.2s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    
-    /* Flexbox centers the SVG perfectly */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0; /* Remove all padding to let Flexbox do the work */
+    padding: 0;
 }
 
-/* Size the icon inside the button */
 .nav-btn svg {
     width: 24px;
     height: 24px;
     stroke-width: 2;
-    /* CRITICAL FIX: This makes the icon 'invisible' to clicks, 
-       so the click passes through to the button. */
     pointer-events: none; 
 }
 
@@ -578,20 +559,12 @@ footer {
 
 /* --- Mobile Fixes --- */
 @media (max-width: 600px) {
-    .poetry-container {
-        position: relative;
-    }
-
+    .poetry-container { position: relative; }
     .nav-btn {
         position: absolute;
-        /* Perfect Vertical Centering */
         top: 50%;
         transform: translateY(-50%); 
-        
-        /* Force buttons to be on TOP of everything */
         z-index: 100; 
-        
-        /* Visual adjustments */
         opacity: 0.9;
         width: 35px;
         height: 35px;
@@ -600,14 +573,11 @@ footer {
         border: none;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
     .prev-btn { left: 0px; }
     .next-btn { right: 0px; }
-
-    /* CRITICAL FIX: Force text away from the buttons */
     .poem-content {
-        padding-left: 60px !important;  /* Bigger safe zone */
-        padding-right: 60px !important; /* Bigger safe zone */
+        padding-left: 60px !important;
+        padding-right: 60px !important;
     }
 }
 
@@ -618,7 +588,7 @@ footer {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #111; /* Dark background like video */
+    background-color: #111;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -628,19 +598,16 @@ footer {
     text-align: center;
 }
 
-/* Hide all scenes initially */
 .one, .three, .four, .five {
     display: none;
     width: 100%;
     padding: 20px;
 }
 
-/* Scene 1 & 2 Text Styles */
 .three p { font-size: 2rem; font-style: italic; }
 .one h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
 .two { font-size: 1.2rem; font-style: italic; color: #ccc; }
 
-/* Scene 3: Chatbox Styles */
 .text-box {
     border: 1px solid #444;
     padding: 15px;
@@ -658,7 +625,7 @@ footer {
     min-height: 20px;
 }
 .fake-btn {
-    background-color: #007bff; /* Blue Send Button */
+    background-color: #007bff;
     color: white;
     padding: 5px 15px;
     border-radius: 3px;
@@ -667,35 +634,30 @@ footer {
     float: right;
 }
 
-/* Scene 4: The Story Text */
 .five p {
     font-size: 1.5rem;
     margin: 15px 0;
-    opacity: 0; /* Hidden for fade in */
+    opacity: 0;
     transition: opacity 0.8s ease-in-out;
 }
 .five p.visible { opacity: 1; }
 
-/* The "Special" Blue Box */
 .special-word {
-    background-color: #00a8ff; /* Bright Blue */
+    background-color: #00a8ff;
     color: white;
     padding: 2px 8px;
     border-radius: 4px;
     font-weight: bold;
     display: inline-block;
-    transform: skew(-10deg); /* Slight tilt like video */
+    transform: skew(-10deg);
 }
 
-/* The Big "SO" */
 .idea-6 {
     font-size: 4rem !important;
     font-weight: bold;
     margin-top: 30px;
 }
 
-
-/* Animations for Step 4 lines */
 .idea-1, .idea-2, .idea-3, .idea-4, .idea-5, .idea-6 {
     opacity: 0;
     transition: opacity 1s;
@@ -703,29 +665,14 @@ footer {
 }
 .visible { opacity: 1; }
 
-.proposal-box {
-    position: relative; /* Container needs relative */
-    height: 200px;      /* Give it space to move */
-}
-
-.no-btn {
-    position: absolute; /* Button needs absolute to move */
-    transition: top 0.3s, left 0.3s; /* Smooth movement */
-    background: #555;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-.yes-btn {
-    z-index: 100; /* Ensure YES is always clickable */
-}
-
-/* --- GROWING YES BUTTON STYLES --- */
+/* --- PROPOSAL BOX (GROWING BUTTON) --- */
 .proposal-box {
     text-align: center;
     padding: 40px 20px;
     margin-top: 50px;
+    position: relative;
+    /* Ensure no residual height from old code */
+    height: auto; 
 }
 
 .buttons {
@@ -734,18 +681,18 @@ footer {
     gap: 20px;
     align-items: center;
     margin-top: 20px;
-    flex-wrap: wrap; /* Allows wrapping on small screens */
+    flex-wrap: wrap;
 }
 
 .yes-btn {
-    background-color: #2ecc71; /* Nice Green */
+    background-color: #2ecc71; /* Green */
     color: white;
     font-size: 1.2rem;
     padding: 10px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth growing */
+    transition: all 0.3s ease;
     font-weight: bold;
 }
 
@@ -760,20 +707,8 @@ footer {
     cursor: pointer;
     font-weight: bold;
     
-    /* IMPORTANT: This resets the button so it sits next to YES */
+    /* Ensure it doesn't float away */
     position: relative !important; 
     top: auto !important;
     left: auto !important;
-}
-
-.yes-btn {
-    background-color: #2ecc71; /* Green */
-    color: white;
-    font-size: 1.2rem;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
 }
