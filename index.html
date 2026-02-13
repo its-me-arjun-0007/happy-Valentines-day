@@ -8,36 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="animation-container" id="bootSequence">
-    <div class="story-step" id="step1">
-        <h1 class="one">Hey <span id="name">Anna Kutty</span></h1>
-        <p class="two">I really like your name btw!</p>
-    </div>
 
-    <div class="story-step" id="step2" style="display:none;">
-        <p>It's Valentine's Day!!! :D</p>
-    </div>
-
-    <div class="story-step" id="step3" style="display:none;">
-        <div class="text-box">
-            <p class="hbd-chatbox">Happy Valentine's Day!! Yeee! Love and blah blah...</p>
-            <p class="fake-btn">Send</p>
-        </div>
-    </div>
-
-    <div class="container" id="bootContainer">
+<div class="container" id="bootContainer">
     
     <div class="three" id="scene1">
         <p>It's Valentine!!! :D</p>
     </div>
 
     <div class="one" id="scene2">
-        <h1 class="one">Hey <span id="name">Anna</span></h1> <p class="two" id="greetingText">I really like your name btw!</p>
+        <h1>Hey <span id="name">Anna</span></h1> 
+        <p class="two" id="greetingText">I really like your name btw!</p>
     </div>
 
     <div class="four" id="scene3">
         <div class="text-box">
-            <p class="hbd-chatbox" id="chatText"></p> <p class="fake-btn">Send</p>
+            <p class="hbd-chatbox" id="chatText"></p> 
+            <p class="fake-btn">Send</p>
         </div>
     </div>
 
@@ -51,239 +37,161 @@
     </div>
 </div>
 
-    <div class="hearts-container" id="heartsContainer"></div>
+<div class="hearts-container" id="heartsContainer"></div>
 
-    <div class="music-player">
-        <button id="musicBtn">🎵 Play Music</button>
-        <audio id="bgMusic" loop>
-            <source src="songs/20250816_143903_613.mp3" type="audio/mp3">
-        </audio>
-    </div>
-
-    <section class="intro-section">
-        <div class="intro-content">
-            <h1 class="typing-text" id="typingText"></h1>
-            <p class="subtitle">A story about Odiyan & Anna</p>
-            <div class="scroll-indicator">⬇</div>
-        </div>
-    </section>
-
-    <section class="stats-section fade-in">
-        <div class="stats-container">
-            <h2 class="stats-title">CONNECTION ESTABLISHED 📶</h2>
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <span class="stat-label">FIRST PING</span>
-                    <span class="stat-value">Aug 16, '22</span>
-                    <span class="stat-sub">07:09 PM</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-label">SECURITY BREACH</span>
-                    <span class="stat-value">Heart Hacked</span>
-                    <span class="stat-sub">By Agent Anna</span>
-                </div>
-               <div class="stat-box">
-    <span class="stat-label">SYSTEM UPTIME</span>
-    <span class="stat-value" id="uptime">Loading...</span>
-    <span class="stat-sub">Since Aug 16, 2022</span>
+<div class="music-player">
+    <button id="musicBtn">🎵 Play Music</button>
+    <audio id="bgMusic" loop>
+        <source src="songs/20250816_143903_613.mp3" type="audio/mp3">
+    </audio>
 </div>
 
-                <div class="stat-box">
-                    <span class="stat-label">WEAPON</span>
-                    <span class="stat-value">"Kummm"</span>
-                    <span class="stat-sub">Spam Detected</span>
-                </div>
+<section class="intro-section">
+    <div class="intro-content">
+        <h1 class="typing-text" id="typingText"></h1>
+        <p class="subtitle">A story about Odiyan & Anna</p>
+        <div class="scroll-indicator">⬇</div>
+    </div>
+</section>
+
+<section class="stats-section fade-in">
+    <div class="stats-container">
+        <h2 class="stats-title">CONNECTION ESTABLISHED 📶</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-label">FIRST PING</span>
+                <span class="stat-value">Aug 16, '22</span>
+                <span class="stat-sub">07:09 PM</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">SECURITY BREACH</span>
+                <span class="stat-value">Heart Hacked</span>
+                <span class="stat-sub">By Agent Anna</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">SYSTEM UPTIME</span>
+                <span class="stat-value" id="uptime">Loading...</span>
+                <span class="stat-sub">Since Aug 16, 2022</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">WEAPON</span>
+                <span class="stat-value">"Kummm"</span>
+                <span class="stat-sub">Spam Detected</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="timeline-section">
-        <h2 class="section-title">Our Story Begins</h2>
-        <div class="timeline">
-            
-            <div class="timeline-item left fade-in">
-                <div class="date-bubble">Aug 16, 2022</div>
-                <div class="content">
-                    <h3>Her First Message</h3>
-                    <p>It started with a simple text: <b>"Hloo"</b>.<br>
-                    I didn't know then that this single notification would change my life forever.</p>
-                </div>
+<section class="timeline-section">
+    <h2 class="section-title">Our Story Begins</h2>
+    <div class="timeline">
+        <div class="timeline-item left fade-in">
+            <div class="date-bubble">Aug 16, 2022</div>
+            <div class="content">
+                <h3>Her First Message</h3>
+                <p>It started with a simple text: <b>"Hloo"</b>.<br>
+                I didn't know then that this single notification would change my life forever.</p>
             </div>
-
-            <div class="timeline-item right fade-in">
-                <div class="date-bubble">Aug 27, 2022</div>
-                <div class="content">
-                    <h3>"Hacker Ano?"</h3>
-                    <p>The day the banter began. You asked, <b>"Hacker ano? Insta hack cheyyuoo?"</b> 😂<br>
-                    And then you introduced yourself: <b>"Njn Anna 🤝"</b>.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item left fade-in">
-                <div class="date-bubble">Dec 14, 2022</div>
-                <div class="content">
-                    <h3>Our First Meetup</h3>
-                    <p>Wednesday. The day the digital butterflies became real. 🦋<br>
-                    From screen names to sitting next to you.</p>
-                </div>
-            </div>
-
         </div>
-    </section>
-
-    <section class="chat-section">
-        <h2 class="section-title">Favorite Memories</h2>
-        <div class="chat-container" id="chatContainer">
+        <div class="timeline-item right fade-in">
+            <div class="date-bubble">Aug 27, 2022</div>
+            <div class="content">
+                <h3>"Hacker Ano?"</h3>
+                <p>The day the banter began. You asked, <b>"Hacker ano? Insta hack cheyyuoo?"</b> 😂<br>
+                And then you introduced yourself: <b>"Njn Anna 🤝"</b>.</p>
             </div>
-    </section>
-
-    <section class="gallery-section">
-        <h2 class="section-title">You & Me</h2>
-        <div class="gallery-grid">
-            <div class="photo-card fade-in"><img src="photos/photo1.jpg" alt="Memory 1"></div>
-            <div class="photo-card fade-in"><img src="photos/photo2.jpg" alt="Memory 2"></div>
-            <div class="photo-card fade-in"><img src="photos/photo3.jpg" alt="Memory 3"></div>
-            <div class="photo-card fade-in"><img src="photos/photo4.jpg" alt="Memory 4"></div>
         </div>
-    </section>
-    
+        <div class="timeline-item left fade-in">
+            <div class="date-bubble">Dec 14, 2022</div>
+            <div class="content">
+                <h3>Our First Meetup</h3>
+                <p>Wednesday. The day the digital butterflies became real. 🦋<br>
+                From screen names to sitting next to you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="chat-section">
+    <h2 class="section-title">Favorite Memories</h2>
+    <div class="chat-container" id="chatContainer"></div>
+</section>
+
+<section class="gallery-section">
+    <h2 class="section-title">You & Me</h2>
+    <div class="gallery-grid">
+        <div class="photo-card fade-in"><img src="photos/photo1.jpg" alt="Memory 1"></div>
+        <div class="photo-card fade-in"><img src="photos/photo2.jpg" alt="Memory 2"></div>
+        <div class="photo-card fade-in"><img src="photos/photo3.jpg" alt="Memory 3"></div>
+        <div class="photo-card fade-in"><img src="photos/photo4.jpg" alt="Memory 4"></div>
+    </div>
+</section>
+
 <section class="poetry-section">
-        <h2 class="section-title">Decrypted Love Logs 📜</h2>
-        <div class="poetry-container fade-in">
-            <button class="nav-btn prev-btn" onclick="changePoem(-1)">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z" clip-rule="evenodd" />
-    </svg>
-            </button>
-            
-            <div class="poem-card">
-                <div class="terminal-header small-header">
-                    <div class="dot red"></div>
-                    <div class="dot yellow"></div>
-                    <div class="dot green"></div>
-                    <span class="terminal-title" id="poemTitle">Loading...</span>
-                </div>
-                <div class="poem-content" id="poemContent">
-                    </div>
-                <div class="poem-footer">
-                    <span id="poemCounter">1 / 10</span>
-                </div>
+    <h2 class="section-title">Decrypted Love Logs 📜</h2>
+    <div class="poetry-container fade-in">
+        <button class="nav-btn prev-btn" onclick="changePoem(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z" clip-rule="evenodd" /></svg>
+        </button>
+        <div class="poem-card">
+            <div class="terminal-header small-header">
+                <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                <span class="terminal-title" id="poemTitle">Loading...</span>
             </div>
-
-            <button class="nav-btn next-btn" onclick="changePoem(1)">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd" />
-    </svg>
-            </button>
+            <div class="poem-content" id="poemContent"></div>
+            <div class="poem-footer"><span id="poemCounter">1 / 10</span></div>
         </div>
-    </section>
-   
-    <section class="rules-section">
-        <h2 class="section-title">My Vows to Us 💍</h2>
-        <div class="rules-container fade-in">
-            <ul class="rules-list">
-                <li>
-                    <span class="icon">🕰️</span>
-                    <p>We don't have to talk 24/7. If you're busy, just let me know.</p>
-                </li>
-                <li>
-                    <span class="icon">🗣️</span>
-                    <p>If I do something you don't like, tell me. It will be corrected.</p>
-                </li>
-                <li>
-                    <span class="icon">👂</span>
-                    <p>Never hide your feelings. I'm here to comfort and listen.</p>
-                </li>
-                <li>
-                    <span class="icon">🌙</span>
-                    <p>We never go to bed angry at each other.</p>
-                </li>
-                <li>
-                    <span class="icon">🧊</span>
-                    <p>If I walk out, it's to calm down—not to leave. I'll always come back with a cool head.</p>
-                </li>
-                <li>
-                    <span class="icon">🤞</span>
-                    <p>We never lie to each other. Honesty is everything.</p>
-                </li>
-                <li>
-                    <span class="icon">✨</span>
-                    <p>I want to hear about your interests, even if you think they are silly.</p>
-                </li>
-                <li>
-                    <span class="icon">🛡️</span>
-                    <p>I will never leave you during rough times. We fix things, we don't break them.</p>
-                </li>
-                <li>
-                    <span class="icon">🏆</span>
-                    <p>I am your #1 supporter in everything you do.</p>
-                </li>
-                <li>
-                    <span class="icon">👰</span>
-                    <p>I am dating you with the intention of marrying you one day. Nothing less.</p>
-                </li>
-                <li class="dealbreaker">
-                    <span class="icon">⛔</span>
-                    <p>If you cheat, I'm gone. That is my only hard line.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="final-section">
-        <div class="envelope fade-in">
-            <div class="terminal-header">
-                <div class="dot red"></div>
-                <div class="dot yellow"></div>
-                <div class="dot green"></div>
-                <span class="terminal-title">odiyan@heart:~/love-letter</span>
-            </div>
-            
-            <div class="love-letter">
-    <p class="code-line"><span class="cmd">sudo open</span> 'heart.txt'</p>
-    <br>
-<p>
-        I never knew that a simple text in 2022 would lead me here. 
-        I wasn't looking for anything, but you walked into my life and quietly became my entire world.
-    </p>
-    <br>
-    <p>
-        You are not just my friend, Anna. <span class="highlight">You are my peace.</span> 
-        When the world gets loud, you are the quiet corner I run to. 
-        When I am tired, you are the rest I need.
-    </p>
-    <br>
-    <p>
-        I choose you on the happy days, and I choose you on the hard days. 
-        I choose your smile, your laugh, and even your silence. 
-        No matter what happens in our lives, my answer will always be you.
-    </p>
-    <br>
-    <p>
-        I love you more than I have words to explain. 
-        You are my best friend, my greatest vulnerability, and my strongest strength.
-    </p>
-    <br>
-    <p class="signature">
-        <b>Yours Forever,</b><br>
-        Odiyan <span class="cursor">_</span>
-    </p>
-</div>
-        </div>
-        </div>
-        <div class="proposal-box">
-    <h3>Accept Valentine Request?</h3>
-    <div class="buttons">
-        <button class="yes-btn" onclick="alert('I knew it! ❤️')">YES</button>
-        <button class="no-btn" onmouseover="moveButton(this)">NO</button>
+        <button class="nav-btn next-btn" onclick="changePoem(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd" /></svg>
+        </button>
     </div>
-    </section>
+</section>
 
-    <footer>
-        <p>Made with ❤️ by Odiyan</p>
-    </footer>
+<section class="rules-section">
+    <h2 class="section-title">My Vows to Us 💍</h2>
+    <div class="rules-container fade-in">
+        <ul class="rules-list">
+            <li><span class="icon">🕰️</span><p>We don't have to talk 24/7. If you're busy, just let me know.</p></li>
+            <li><span class="icon">🗣️</span><p>If I do something you don't like, tell me. It will be corrected.</p></li>
+            <li><span class="icon">👂</span><p>Never hide your feelings. I'm here to comfort and listen.</p></li>
+            <li><span class="icon">🌙</span><p>We never go to bed angry at each other.</p></li>
+            <li><span class="icon">🧊</span><p>If I walk out, it's to calm down—not to leave. I'll always come back with a cool head.</p></li>
+            <li><span class="icon">🤞</span><p>We never lie to each other. Honesty is everything.</p></li>
+            <li><span class="icon">✨</span><p>I want to hear about your interests, even if you think they are silly.</p></li>
+            <li><span class="icon">🛡️</span><p>I will never leave you during rough times. We fix things, we don't break them.</p></li>
+            <li><span class="icon">🏆</span><p>I am your #1 supporter in everything you do.</p></li>
+            <li><span class="icon">👰</span><p>I am dating you with the intention of marrying you one day. Nothing less.</p></li>
+            <li class="dealbreaker"><span class="icon">⛔</span><p>If you cheat, I'm gone. That is my only hard line.</p></li>
+        </ul>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<section class="final-section">
+    <div class="envelope fade-in">
+        <div class="terminal-header">
+            <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+            <span class="terminal-title">odiyan@heart:~/love-letter</span>
+        </div>
+        <div class="love-letter">
+            <p class="code-line"><span class="cmd">sudo open</span> 'heart.txt'</p><br>
+            <p>I never knew that a simple text in 2022 would lead me here. I wasn't looking for anything, but you walked into my life and quietly became my entire world.</p><br>
+            <p>You are not just my friend, Anna. <span class="highlight">You are my peace.</span> When the world gets loud, you are the quiet corner I run to.</p><br>
+            <p>I choose you on the happy days, and I choose you on the hard days. I choose your smile, your laugh, and even your silence. No matter what happens in our lives, my answer will always be you.</p><br>
+            <p>I love you more than I have words to explain. You are my best friend, my greatest vulnerability, and my strongest strength.</p><br>
+            <p class="signature"><b>Yours Forever,</b><br>Odiyan <span class="cursor">_</span></p>
+        </div>
+    </div>
+    
+    <div class="proposal-box">
+        <h3>Accept Valentine Request?</h3>
+        <div class="buttons">
+            <button class="yes-btn" onclick="alert('I knew it! ❤️')">YES</button>
+            <button class="no-btn" onmouseover="moveButton(this)" ontouchstart="moveButton(this)">NO</button>
+        </div>
+    </div>
+</section>
+
+<footer><p>Made with ❤️ by Odiyan</p></footer>
+<script src="script.js"></script>
 </body>
 </html>
-
