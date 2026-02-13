@@ -8,7 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div id="boot-screen">
+    <div class="terminal-text">
+        <p>> INITIALIZING HEART_KERNEL...</p>
+        <p>> LOADING MEMORIES [||||||||||] 100%</p>
+        <p>> BYPASSING FIREWALL...</p>
+        <p>> ACCESS GRANTED: WELCOME ANNA.</p>
+    </div>
+</div>
     <div class="hearts-container" id="heartsContainer"></div>
 
     <div class="music-player">
@@ -41,9 +48,9 @@
                     <span class="stat-sub">By Agent Anna</span>
                 </div>
                 <div class="stat-box">
-                    <span class="stat-label">STATUS</span>
-                    <span class="stat-value">Forever</span>
-                    <span class="stat-sub">No Expiry Date</span>
+                    <span class="stat-label">SYSTEM UPTIME</span>
+                    <span class="stat-value" id="uptime">0d 0h 0m 0s</span>
+                    <span class="stat-sub">Since Aug 16, 2022</span>
                 </div>
                 <div class="stat-box">
                     <span class="stat-label">WEAPON</span>
@@ -226,8 +233,14 @@
         Odiyan <span class="cursor">_</span>
     </p>
 </div>
-
         </div>
+        </div>
+        <div class="proposal-box">
+    <h3>Accept Valentine Request?</h3>
+    <div class="buttons">
+        <button class="yes-btn" onclick="alert('I knew it! ❤️')">YES</button>
+        <button class="no-btn" onmouseover="moveButton(this)">NO</button>
+    </div>
     </section>
 
     <footer>
