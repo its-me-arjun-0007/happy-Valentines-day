@@ -8,12 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="boot-screen">
-    <div class="terminal-text">
-        <p>> INITIALIZING HEART_KERNEL...</p>
-        <p>> LOADING MEMORIES [||||||||||] 100%</p>
-        <p>> BYPASSING FIREWALL...</p>
-        <p>> ACCESS GRANTED: WELCOME ANNA.</p>
+<div class="animation-container" id="bootSequence">
+    <div class="story-step" id="step1">
+        <h1 class="one">Hey <span id="name">Anna Kutty</span></h1>
+        <p class="two">I really like your name btw!</p>
+    </div>
+
+    <div class="story-step" id="step2" style="display:none;">
+        <p>It's Valentine's Day!!! :D</p>
+    </div>
+
+    <div class="story-step" id="step3" style="display:none;">
+        <div class="text-box">
+            <p class="hbd-chatbox">Happy Valentine's Day!! Yeee! Love and blah blah...</p>
+            <p class="fake-btn">Send</p>
+        </div>
+    </div>
+
+    <div class="story-step" id="step4" style="display:none;">
+        <p class="idea-1">That's what I was going to do.</p>
+        <p class="idea-2">But then I stopped.</p>
+        <p class="idea-3">I realised, I wanted to do something <strong>special</strong>.</p>
+        <p class="idea-4">Because,</p>
+        <p class="idea-5">You are Special <span>❤️</span></p>
+        <p class="idea-6"><span>S</span><span>O</span>...</p>
     </div>
 </div>
     <div class="hearts-container" id="heartsContainer"></div>
