@@ -10,23 +10,19 @@
 <body>
 
 <div class="container" id="bootContainer">
-    
     <div class="three" id="scene1">
         <p>It's Valentine!!! :D</p>
     </div>
-
     <div class="one" id="scene2">
-        <h1>Hey <span id="name">Anna</span></h1> 
+        <h1 class="one">Hey <span id="name">Anna</span></h1>
         <p class="two" id="greetingText">I really like your name btw!</p>
     </div>
-
     <div class="four" id="scene3">
         <div class="text-box">
-            <p class="hbd-chatbox" id="chatText"></p> 
+            <p class="hbd-chatbox" id="chatText"></p>
             <p class="fake-btn">Send</p>
         </div>
     </div>
-
     <div class="five" id="scene4">
         <p class="idea-1">That's what I was going to do.</p>
         <p class="idea-2">But then I stopped.</p>
@@ -70,7 +66,7 @@
             </div>
             <div class="stat-box">
                 <span class="stat-label">SYSTEM UPTIME</span>
-                <span class="stat-value" id="uptime">Loading...</span>
+                <span class="stat-value" id="uptime">Calculating...</span>
                 <span class="stat-sub">Since Aug 16, 2022</span>
             </div>
             <div class="stat-box">
@@ -131,18 +127,26 @@
     <h2 class="section-title">Decrypted Love Logs 📜</h2>
     <div class="poetry-container fade-in">
         <button class="nav-btn prev-btn" onclick="changePoem(-1)">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z" clip-rule="evenodd" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z" clip-rule="evenodd" />
+            </svg>
         </button>
         <div class="poem-card">
             <div class="terminal-header small-header">
-                <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
                 <span class="terminal-title" id="poemTitle">Loading...</span>
             </div>
             <div class="poem-content" id="poemContent"></div>
-            <div class="poem-footer"><span id="poemCounter">1 / 10</span></div>
+            <div class="poem-footer">
+                <span id="poemCounter">1 / 10</span>
+            </div>
         </div>
         <button class="nav-btn next-btn" onclick="changePoem(1)">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd" />
+            </svg>
         </button>
     </div>
 </section>
@@ -155,12 +159,12 @@
             <li><span class="icon">🗣️</span><p>If I do something you don't like, tell me. It will be corrected.</p></li>
             <li><span class="icon">👂</span><p>Never hide your feelings. I'm here to comfort and listen.</p></li>
             <li><span class="icon">🌙</span><p>We never go to bed angry at each other.</p></li>
-            <li><span class="icon">🧊</span><p>If I walk out, it's to calm down—not to leave. I'll always come back with a cool head.</p></li>
+            <li><span class="icon">🧊</span><p>If I walk out, it's to calm down—not to leave.</p></li>
             <li><span class="icon">🤞</span><p>We never lie to each other. Honesty is everything.</p></li>
             <li><span class="icon">✨</span><p>I want to hear about your interests, even if you think they are silly.</p></li>
-            <li><span class="icon">🛡️</span><p>I will never leave you during rough times. We fix things, we don't break them.</p></li>
+            <li><span class="icon">🛡️</span><p>I will never leave you during rough times.</p></li>
             <li><span class="icon">🏆</span><p>I am your #1 supporter in everything you do.</p></li>
-            <li><span class="icon">👰</span><p>I am dating you with the intention of marrying you one day. Nothing less.</p></li>
+            <li><span class="icon">👰</span><p>I am dating you with the intention of marrying you one day.</p></li>
             <li class="dealbreaker"><span class="icon">⛔</span><p>If you cheat, I'm gone. That is my only hard line.</p></li>
         </ul>
     </div>
@@ -169,15 +173,22 @@
 <section class="final-section">
     <div class="envelope fade-in">
         <div class="terminal-header">
-            <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
             <span class="terminal-title">odiyan@heart:~/love-letter</span>
         </div>
         <div class="love-letter">
-            <p class="code-line"><span class="cmd">sudo open</span> 'heart.txt'</p><br>
-            <p>I never knew that a simple text in 2022 would lead me here. I wasn't looking for anything, but you walked into my life and quietly became my entire world.</p><br>
-            <p>You are not just my friend, Anna. <span class="highlight">You are my peace.</span> When the world gets loud, you are the quiet corner I run to.</p><br>
-            <p>I choose you on the happy days, and I choose you on the hard days. I choose your smile, your laugh, and even your silence. No matter what happens in our lives, my answer will always be you.</p><br>
-            <p>I love you more than I have words to explain. You are my best friend, my greatest vulnerability, and my strongest strength.</p><br>
+            <p class="code-line"><span class="cmd">sudo open</span> 'heart.txt'</p>
+            <br>
+            <p>I never knew that a simple text in 2022 would lead me here. I wasn't looking for anything, but you walked into my life and quietly became my entire world.</p>
+            <br>
+            <p>You are not just my friend, Anna. <span class="highlight">You are my peace.</span> When the world gets loud, you are the quiet corner I run to.</p>
+            <br>
+            <p>I choose you on the happy days, and I choose you on the hard days. I choose your smile, your laugh, and even your silence.</p>
+            <br>
+            <p>I love you more than I have words to explain. You are my best friend, my greatest vulnerability, and my strongest strength.</p>
+            <br>
             <p class="signature"><b>Yours Forever,</b><br>Odiyan <span class="cursor">_</span></p>
         </div>
     </div>
@@ -191,7 +202,10 @@
     </div>
 </section>
 
-<footer><p>Made with ❤️ by Odiyan</p></footer>
+<footer>
+    <p>Made with ❤️ by Odiyan</p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
