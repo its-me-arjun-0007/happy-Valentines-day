@@ -229,40 +229,77 @@ function moveButton(btn) {
 }
 
 
-// NEW STORY ANIMATION SEQUENCE
-function runBootSequence() {
-    const seq = document.getElementById('bootSequence');
+// --- NEW BOOT SEQUENCE ANIMATION ---
+function runAnimation() {
+    const container = document.getElementById('bootContainer');
+    const s1 = document.getElementById('scene1');
+    const s2 = document.getElementById('scene2');
+    const s3 = document.getElementById('scene3');
+    const s4 = document.getElementById('scene4');
+
+    // 1. Start: Show "It's Valentine"
+    s1.style.display = 'block';
     
-    // Step 1: Hey Anna
-    setTimeout(() => { document.getElementById('step1').style.display = 'none'; document.getElementById('step2').style.display = 'block'; }, 2500);
-    
-    // Step 2: It's Valentine
-    setTimeout(() => { document.getElementById('step2').style.display = 'none'; document.getElementById('step3').style.display = 'block'; }, 4500);
-    
-    // Step 3: Chatbox
-    setTimeout(() => { document.getElementById('step3').style.display = 'none'; document.getElementById('step4').style.display = 'block'; playStep4(); }, 7500);
+    setTimeout(() => {
+        // 2. Swap to "Hey Anna" (2.5 seconds in)
+        s1.style.display = 'none';
+        s2.style.display = 'block';
+    }, 2500);
+
+    setTimeout(() => {
+        // 3. Swap to Chatbox (5 seconds in)
+        s2.style.display = 'none';
+        s3.style.display = 'block';
+        typeChatEffect(); // Start typing
+    }, 5000);
+
+    // 4. Swap to Story Lines (9 seconds in)
+    setTimeout(() => {
+        s3.style.display = 'none';
+        s4.style.display = 'block';
+        playStoryLines();
+    }, 9000);
 }
 
-function playStep4() {
-    const lines = ['.idea-1', '.idea-2', '.idea-3', '.idea-4', '.idea-5', '.idea-6'];
-    let delay = 500;
+// Typing effect for the chatbox
+function typeChatEffect() {
+    const text = "Happy Valentine's Day!! Yeee! Love and blah blah...";
+    const element = document.getElementById('chatText');
+    let i = 0;
+    element.innerHTML = ""; // Clear styling
     
-    lines.forEach((selector) => {
+    const interval = setInterval(() => {
+        element.innerHTML += text.charAt(i);
+        i++;
+        if (i >= text.length) clearInterval(interval);
+    }, 50); // Speed of typing
+}
+
+// Reveal story lines one by one
+function playStoryLines() {
+    const lines = document.querySelectorAll('.five p');
+    let delay = 500;
+
+    lines.forEach((line, index) => {
         setTimeout(() => {
-            const el = document.querySelector(selector);
-            if(el) el.classList.add('visible');
+            line.classList.add('visible');
         }, delay);
-        delay += 1500; // Wait 1.5s between each line
+        delay += 1500; // 1.5s pause between lines
     });
 
-    // FINAL: Hide everything and show website
+    // FINAL: Fade out and remove (after all lines are shown)
     setTimeout(() => {
-        const boot = document.getElementById('bootSequence');
-        boot.style.opacity = '0';
-        setTimeout(() => { boot.style.display = 'none'; }, 1000);
-    }, delay + 1000);
+        const container = document.getElementById('bootContainer');
+        container.style.transition = 'opacity 1s';
+        container.style.opacity = '0';
+        setTimeout(() => { container.style.display = 'none'; }, 1000);
+    }, delay + 2000);
 }
 
-// Start animation on load
-window.addEventListener('load', runBootSequence);
+// Run on load
+window.addEventListener('load', () => {
+    runAnimation();
+    // Re-run other fixes just in case
+    setInterval(updateUptime, 1000); 
+});
 
