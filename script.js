@@ -214,25 +214,40 @@ function moveButton(btn) {
     btn.style.top = y + 'px';
 }
 
-#boot-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    color: #0f0; /* Hacker Green */
-    font-family: 'Courier New', monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    flex-direction: column;
+// NEW STORY ANIMATION SEQUENCE
+function runBootSequence() {
+    const seq = document.getElementById('bootSequence');
+    
+    // Step 1: Hey Anna
+    setTimeout(() => { document.getElementById('step1').style.display = 'none'; document.getElementById('step2').style.display = 'block'; }, 2500);
+    
+    // Step 2: It's Valentine
+    setTimeout(() => { document.getElementById('step2').style.display = 'none'; document.getElementById('step3').style.display = 'block'; }, 4500);
+    
+    // Step 3: Chatbox
+    setTimeout(() => { document.getElementById('step3').style.display = 'none'; document.getElementById('step4').style.display = 'block'; playStep4(); }, 7500);
 }
-.terminal-text p {
-    animation: type 2s steps(40, end);
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 5px;
+
+function playStep4() {
+    const lines = ['.idea-1', '.idea-2', '.idea-3', '.idea-4', '.idea-5', '.idea-6'];
+    let delay = 500;
+    
+    lines.forEach((selector) => {
+        setTimeout(() => {
+            const el = document.querySelector(selector);
+            if(el) el.classList.add('visible');
+        }, delay);
+        delay += 1500; // Wait 1.5s between each line
+    });
+
+    // FINAL: Hide everything and show website
+    setTimeout(() => {
+        const boot = document.getElementById('bootSequence');
+        boot.style.opacity = '0';
+        setTimeout(() => { boot.style.display = 'none'; }, 1000);
+    }, delay + 1000);
 }
+
+// Start animation on load
+window.addEventListener('load', runBootSequence);
 
